@@ -1,0 +1,12 @@
+<div ng-controller="ProductEnterController">
+    <pre style="width: 600px;">Enter product in json format: 
+    {"productType" :"iPhone",
+    	 "productList" : [
+    	 	{"productName":"iPhone 5S","volume":2,"itemPrice":450},
+    	 	{"productName":"iPhone 4","volume":4,"itemPrice":300}
+    	 ]	 
+   	}</pre>
+    <textarea ng-model="product" style="width: 600px; height: 150px;" ></textarea>
+    <button ng-click="sendProduct()" value="Send">Send</button>
+    <p>{{status}}</p>
+</div>

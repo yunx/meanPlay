@@ -12,8 +12,8 @@ angular.module('mean.system').config(['$stateProvider', '$urlRouterProvider',
                     url: '/',
                     templateUrl: 'public/system/views/index.html'
                 })
-                .state('auth', {
-                    templateUrl: 'public/auth/views/index.html'
+                .state('product', {
+                    templateUrl: 'public/product/views/index.html'
                 });
         }
     ])

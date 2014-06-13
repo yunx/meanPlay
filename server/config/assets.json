@@ -2,7 +2,8 @@
     "core": {
         "css": {
             "public/build/css/dist.min.css": [
-                "public/**/assets/css/*.css"
+                "public/**/assets/css/*.css",
+                "public/system/lib/jqplot/jquery.jqplot.min.css"                
             ]
         },
         "js": {
@@ -13,6 +14,8 @@
                 "public/system/lib/angular-resource/angular-resource.js",
                 "public/system/lib/angular-ui-router/release/angular-ui-router.js",
                 "public/system/lib/jquery/dist/jquery.min.js",
+                "public/system/lib/jqplot/jquery.jqplot.js",
+                "public/system/lib/jqplot/plugins/jqplot.enhancedLegendRenderer.js",
                 "public/system/lib/angular-bootstrap/ui-bootstrap.js",
                 "public/system/lib/angular-bootstrap/ui-bootstrap-tpls.js",
                 "public/init.js",

@@ -25,7 +25,7 @@ var express = require('express'),
     fs = require('fs'),
     Grid = require('gridfs-stream');
 
-module.exports = function(app, passport, db) {
+module.exports = function(app, db) {
 
     var gfs = new Grid(db.connection.db, db.mongo);
 
@@ -97,10 +97,6 @@ module.exports = function(app, passport, db) {
     // Dynamic helpers
     app.use(helpers(config.app.name));
 
-    // Use passport session
-    app.use(passport.initialize());
-    app.use(passport.session());
-
     //mean middleware from modules before routes
     app.use(mean.chainware.before);
 
@@ -164,7 +160,7 @@ module.exports = function(app, passport, db) {
             // used and shared by routes as further middlewares and is not a
             // route by itself
             util.walk(appPath + '/server', 'route', 'middlewares', function(path) {
-                require(path)(app, passport);
+                require(path)(app);
             });
         }
 
